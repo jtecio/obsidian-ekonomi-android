@@ -19,6 +19,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import se.blackbox.obsidianekonomi.ui.HomeScreen
+import se.blackbox.obsidianekonomi.ui.SettingsScreen
 import se.blackbox.obsidianekonomi.ui.SummaryScreen
 import se.blackbox.obsidianekonomi.ui.theme.ObsidianEkonomiTheme
 
@@ -77,6 +78,7 @@ class MainActivity : ComponentActivity() {
     private fun AppContent(viewModel: MainViewModel) {
         val navController = rememberNavController()
         val uiState by viewModel.uiState.collectAsState()
+        val settings by viewModel.settings.collectAsState()
 
         // Visa error snackbar
         if (uiState.error != null) {
@@ -115,17 +117,13 @@ class MainActivity : ComponentActivity() {
             }
 
             composable("settings") {
-                // TODO: Skapa SettingsScreen
-                Surface(modifier = Modifier.fillMaxSize()) {
-                    Column(
-                        modifier = Modifier.padding(16.dp)
-                    ) {
-                        Text("Inställningar kommer snart!")
-                        Button(onClick = { navController.popBackStack() }) {
-                            Text("Tillbaka")
-                        }
-                    }
-                }
+                SettingsScreen(
+                    settings = settings,
+                    onSettingsChanged = { newSettings ->
+                        viewModel.updateSettings(newSettings)
+                    },
+                    onBack = { navController.popBackStack() }
+                )
             }
         }
     }
