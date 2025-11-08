@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">Obsidian Ekonomi</string>
+
+    <!-- Home Screen -->
+    <string name="home_title">Ekonomi</string>
+    <string name="add_transaction">Lägg till</string>
+    <string name="new_transaction">Ny transaktion</string>
+    <string name="expense">Utgift</string>
+    <string name="income">Inkomst</string>
+    <string name="select_category">Välj kategori…</string>
+    <string name="amount_kr">Belopp (kr)</string>
+    <string name="description_optional">Beskrivning (valfri)</string>
+    <string name="what_did_you_buy">Vad köpte du?</string>
+    <string name="today">Idag</string>
+    <string name="no_transactions_yet">Inga transaktioner ännu</string>
+    <string name="add_first_expense">Lägg till din första utgift ovan</string>
+
+    <!-- Summary Screen -->
+    <string name="summary">Summering</string>
+    <string name="per_category">Per Kategori</string>
+    <string name="transactions_count">Transaktioner (%1$d)</string>
+    <string name="no_transactions">Inga transaktioner</string>
+    <string name="no_expenses_for_period">Inga utgifter registrerade %1$s</string>
+    <string name="this_week">denna vecka</string>
+    <string name="this_month">denna månad</string>
+    <string name="week_number">Vecka %1$d</string>
+    <string name="transactions_plural">transaktioner</string>
+    <string name="of_expenses">%% av utgifter</string>
+    <string name="income_label">Inkomster</string>
+    <string name="net_label">Netto</string>
+
+    <!-- Settings -->
+    <string name="settings">Inställningar</string>
+    <string name="vault_path">Vault-sökväg</string>
+    <string name="storage_method">Lagringsmetod</string>
+    <string name="markdown_format">Markdown-format</string>
+
+    <!-- Actions -->
+    <string name="back">Tillbaka</string>
+    <string name="cancel">Avbryt</string>
+    <string name="save">Spara</string>
+    <string name="take_receipt_photo">Ta kvittofoto</string>
+
+    <!-- Permissions -->
+    <string name="camera_permission_required">Kamera-behörighet krävs för kvittofoton</string>
+    <string name="storage_permission_required">Filåtkomst krävs för att läsa Obsidian vault</string>
+
+    <!-- Errors -->
+    <string name="error_loading_transactions">Kunde inte läsa transaktioner</string>
+    <string name="error_saving_transaction">Kunde inte spara transaktion</string>
+    <string name="vault_not_configured">Vault-sökväg inte konfigurerad. Gå till inställningar.</string>
+
+    <!-- Success -->
+    <string name="transaction_saved">Transaktion sparad!</string>
+
+    <!-- Categories (default names) -->
+    <string name="category_food">Mat &amp; Dryck</string>
+    <string name="category_transport">Transport</string>
+    <string name="category_shopping">Shopping</string>
+    <string name="category_bills">Räkningar</string>
+    <string name="category_entertainment">Nöje</string>
+    <string name="category_health">Hälsa</string>
+    <string name="category_other">Övrigt</string>
+    <string name="category_income">Inkomst</string>
+</resources>

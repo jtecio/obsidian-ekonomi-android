@@ -151,22 +151,37 @@ Du kan lägga till egna i framtida version!
 
 ```
 app/src/main/java/se/blackbox/obsidianekonomi/
-├── MainActivity.kt                 # Huvudaktivitet
-├── MainViewModel.kt                # Logik & state
+├── MainActivity.kt                 # Huvudaktivitet ✅
+├── MainViewModel.kt                # Logik & state ✅
 ├── data/
-│   ├── Models.kt                   # Datamodeller
-│   ├── ObsidianVault.kt            # Vault läs/skriv
-│   ├── SettingsRepository.kt       # Inställningar
-│   └── ReceiptScanner.kt           # OCR
+│   ├── Models.kt                   # Datamodeller ✅
+│   ├── ObsidianVault.kt            # Vault läs/skriv ✅
+│   └── SettingsRepository.kt       # Inställningar ✅
 ├── ui/
-│   ├── HomeScreen.kt               # Huvudskärm
-│   ├── SummaryScreen.kt            # Summering
-│   ├── SettingsScreen.kt           # Inställningar
+│   ├── HomeScreen.kt               # Huvudskärm ✅
+│   ├── SummaryScreen.kt            # Summering ✅
+│   ├── SettingsScreen.kt           # Inställningar (TODO)
 │   └── theme/
-│       └── Theme.kt                # Material 3 tema
+│       ├── Theme.kt                # Material 3 tema ✅
+│       └── Type.kt                 # Typografi ✅
 └── util/
-    └── Permissions.kt              # Behörighetshantering
+    └── ReceiptScanner.kt           # OCR (TODO - framtida)
 ```
+
+### ✅ Implementerat (v0.1 - MVP)
+
+- **HomeScreen** - Snabbinmatning av utgifter/inkomster
+- **SummaryScreen** - Visar summering per dag/vecka/månad och kategori
+- **MainViewModel** - Hanterar all business logic och state
+- **ObsidianVault** - Läser och skriver markdown till vault
+- **Models** - Komplett datamodell för transaktioner och inställningar
+- **Theme** - Material 3 ljust/mörkt tema med dynamic colors
+
+### 🚧 Kvarstår för v1.0
+
+- **SettingsScreen** - UI för konfiguration av vault-sökväg och format
+- **ReceiptScanner** - OCR-integration för kvittofoton (Google ML Kit)
+- **CameraX** - Foto-funktion för kvitton
 
 ## 🔒 Behörigheter
 
